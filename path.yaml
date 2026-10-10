@@ -1,0 +1,120 @@
+# Preparation path. Keep its course registration draft until content is ready.
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP005
+  slug: certified-kubernetes-administrator-cka
+  title: Certified Kubernetes Administrator (CKA)
+  description: 'Preparation path for CKA: one training series per curriculum domain. Content authoring
+    is planned.'
+  version: 0.1.0
+  language: en
+  authors:
+  - name: Paris Nakita Kejser
+    email: paris@astrona.io
+    company: Astrona.io
+  tags:
+  - CKA
+  - Certification Preparation
+  license: Apache-2.0
+spec:
+  audience: Learners preparing for Certified Kubernetes Administrator (CKA).
+  difficulty: Intermediate
+  examPreparation:
+    enabled: true
+    title: Certified Kubernetes Administrator (CKA)
+    officialSyllabusUrl: https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/
+    examId: CKA
+    provider: CNCF / The Linux Foundation
+  prerequisites:
+  - Basic command-line knowledge and familiarity with the subject of the exam.
+  - A computer capable of running the environments selected during content authoring.
+  learningOutcomes:
+  - Prepare for the Storage domain.
+  - Prepare for the Troubleshooting domain.
+  - Prepare for the Workloads & Scheduling domain.
+  - Prepare for the Cluster Architecture, Installation & Configuration domain.
+  - Prepare for the Services & Networking domain.
+  stages:
+  - id: ATP005-STG001
+    title: Storage
+    description: Prepare for Storage.
+    examDomain: Storage
+    weight: 10
+    learningOutcomes:
+    - Implement storage classes and dynamic volume provisioning
+    - Configure volume types, access modes and reclaim policies
+    - Manage persistent volumes and persistent volume claims
+    content:
+    - ref: ATS022
+      repository: https://github.com/astrona-io/ATS022
+      path: .
+      version: 0.1.0
+  - id: ATP005-STG002
+    title: Troubleshooting
+    description: Prepare for Troubleshooting.
+    examDomain: Troubleshooting
+    weight: 30
+    learningOutcomes:
+    - Troubleshoot clusters and nodes
+    - Troubleshoot cluster components
+    - Monitor cluster and application resource usage
+    - Manage and evaluate container output streams
+    - Troubleshoot services and networking
+    content:
+    - ref: ATS023
+      repository: https://github.com/astrona-io/ATS023
+      path: .
+      version: 0.1.0
+  - id: ATP005-STG003
+    title: Workloads & Scheduling
+    description: Prepare for Workloads & Scheduling.
+    examDomain: Workloads & Scheduling
+    weight: 15
+    learningOutcomes:
+    - Understand application deployments and how to perform rolling update and rollbacks
+    - Use ConfigMaps and Secrets to configure applications
+    - Configure workload autoscaling
+    - Understand the primitives used to create robust, self-healing, application deployments
+    - Configure Pod admission and scheduling (limits, node affinity, etc.)
+    content:
+    - ref: ATS024
+      repository: https://github.com/astrona-io/ATS024
+      path: .
+      version: 0.1.0
+  - id: ATP005-STG004
+    title: Cluster Architecture, Installation & Configuration
+    description: Prepare for Cluster Architecture, Installation & Configuration.
+    examDomain: Cluster Architecture, Installation & Configuration
+    weight: 25
+    learningOutcomes:
+    - Manage role based access control (RBAC)
+    - Prepare underlying infrastructure for installing a Kubernetes cluster
+    - Create and manage Kubernetes clusters using kubeadm
+    - Manage the lifecycle of Kubernetes clusters
+    - Implement and configure a highly-available control plane
+    - Use Helm and Kustomize to install cluster components
+    - Understand extension interfaces (CNI, CSI, CRI, etc.)
+    - Understand CRDs, install and configure operators
+    content:
+    - ref: ATS025
+      repository: https://github.com/astrona-io/ATS025
+      path: .
+      version: 0.1.0
+  - id: ATP005-STG005
+    title: Services & Networking
+    description: Prepare for Services & Networking.
+    examDomain: Services & Networking
+    weight: 20
+    learningOutcomes:
+    - Understand connectivity between Pods
+    - Define and enforce Network Policies
+    - Use ClusterIP, NodePort, LoadBalancer service types and endpoints
+    - Use the Gateway API to manage Ingress traffic
+    - Know how to use Ingress controllers and Ingress resources
+    - Understand and use CoreDNS
+    content:
+    - ref: ATS026
+      repository: https://github.com/astrona-io/ATS026
+      path: .
+      version: 0.1.0
